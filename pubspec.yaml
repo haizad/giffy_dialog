@@ -9,11 +9,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flare_flutter: ^2.0.6
+  flare_flutter: ^3.0.1
   
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  image_test_utils: ^1.0.0
+  # image_test_utils: ^1.0.0
+  network_image_mock: ^2.0.1
 
 flutter:
