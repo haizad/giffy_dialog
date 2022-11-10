@@ -200,10 +200,14 @@ class _BaseGiffyDialogState extends State<BaseGiffyDialog>
             : MainAxisAlignment.center,
         children: <Widget>[
           if (!widget.onlyOkButton) ...[
-            RaisedButton(
-              color: widget.buttonCancelColor,
-              shape: RoundedRectangleBorder(
+            ElevatedButton(
+
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(widget.buttonRadius)),
+                backgroundColor : widget.buttonCancelColor, // background
+              ),
+
               onPressed: widget.onCancelButtonPressed ??
                   () => Navigator.of(context).pop(),
               child: widget.buttonCancelText ??
@@ -214,10 +218,13 @@ class _BaseGiffyDialogState extends State<BaseGiffyDialog>
             )
           ],
           if (!widget.onlyCancelButton) ...[
-            RaisedButton(
-              color: widget.buttonOkColor,
-              shape: RoundedRectangleBorder(
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(widget.buttonRadius)),
+                padding: EdgeInsets.all(12.0),
+                backgroundColor : widget.buttonOkColor, // background
+              ),
               onPressed: widget.onOkButtonPressed,
               child: widget.buttonOkText ??
                   Text(
